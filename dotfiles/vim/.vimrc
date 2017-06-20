@@ -24,7 +24,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
 
 call vundle#end()
+" RUN :PluginInstall to install plugins
+" RUN :PluginInstall! or PluginUpdate to update
+" RUN :PluginClean to remove unused plugins
+
 filetype plugin indent on
+
+" Plugin mappings
+map <C-n> :NERDTreeToggle<CR>
 
 " UI
 syntax enable                                            " Enable syntax processing
