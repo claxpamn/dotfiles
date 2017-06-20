@@ -30,8 +30,12 @@ call vundle#end()
 
 filetype plugin indent on
 
-" Plugin mappings
+" NERDTree stuff
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeWinSize=20
+let NERDTreeShowHidden=1
+" close vim if NERDTree is the only thing open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " UI
 syntax enable                                            " Enable syntax processing
