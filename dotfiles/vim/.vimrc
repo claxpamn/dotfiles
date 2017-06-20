@@ -32,6 +32,7 @@ filetype plugin indent on
 
 " NERDTree stuff
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['.git', 'node_modules', 'bower_components']
 let NERDTreeWinSize=20
 let NERDTreeShowHidden=1
 " close vim if NERDTree is the only thing open
