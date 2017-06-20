@@ -15,6 +15,15 @@ set encoding=utf8                                        " Set utf8 as standard 
 set ffs=unix,dos,mac                                     " Use Unix as the standard file type
 set backspace=indent,eol,start                           " Allow backspace
 
+" Plugins
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()
+filetype plugin indent on
+
 " UI
 syntax enable                                            " Enable syntax processing
 colorscheme dracula                                      " Set colorscheme to Dracula
@@ -86,3 +95,8 @@ set statusline+=%F\                                      " full file path
 set statusline+=%=%1*%y%*%*\                             " file type
 set statusline+=%10((%l,%c)%)\                           " line and column
 set statusline+=(%p%%)                                   " percentage of file
+
+" XA2WjJbmmoM
+" Snippets
+nnoremap ,html :1read $HOME/.vim/skeleton/html<CR>3jwf>a
+
